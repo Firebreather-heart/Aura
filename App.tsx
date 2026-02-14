@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mic, MicOff, Settings, BrainCircuit, AudioLines, X, Sparkles, AlertCircle } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { LiveClient } from './services/liveClient';
 import { AudioVisualizer } from './components/AudioVisualizer';
 import { SettingsDialog } from './components/SettingsDialog';
@@ -252,6 +253,7 @@ const App: React.FC = () => {
           animation: pulse-slow 3s infinite ease-in-out;
         }
       `}</style>
+      <Analytics />
     </div>
   );
 };
